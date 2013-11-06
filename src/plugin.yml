@@ -1,0 +1,9 @@
+name: TeamFomps
+version: 1.0.0
+description: Simple customizations for the Team Fomps Minecraft server.
+author: Stephen Van Dahm
+website: http://minecraft.teamfomps.com
+
+main: com.teamfomps.minecraft.TeamFomps
+database: false
+
