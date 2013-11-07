@@ -33,7 +33,7 @@ public class MonsterListener implements Listener
 
         // Ignore creatures that aren't monsters
         if (! (event.getEntity() instanceof Monster)) {
-
+            return;
         }
 
         // Ignore monsters spawned by a plugin.
