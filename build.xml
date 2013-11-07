@@ -3,7 +3,7 @@
     <target name="init">
         <mkdir dir="bin"/>
     </target>
-    <target name="compile">
+    <target name="compile" depends="init">
         <javac srcdir="src" destdir="bin" includeantruntime="false">
             <classpath>
                 <fileset dir="lib">
@@ -15,9 +15,9 @@
 
     <target name="dist" depends="compile">
         <mkdir dir="dist"/>
-        <jar jarfile="dist/teamfomps.jar">
+        <jar jarfile="dist/TeamFomps.jar">
             <fileset dir="bin"/>
-            <fileset file="src/plugin.yml"/>
+            <fileset file="src/main/resources/plugin.yml"/>
         </jar>
     </target>
 
