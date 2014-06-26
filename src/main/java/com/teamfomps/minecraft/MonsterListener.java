@@ -66,34 +66,4 @@ public class MonsterListener implements Listener
 
         event.setCancelled(true);
     }
-
-    @EventHandler
-    public void preventMonstersFromSpawningInTheHorseFarm(CreatureSpawnEvent event)
-    {
-        boolean cancelled = false;
-        double x = event.getLocation().getX();
-        double z = event.getLocation().getZ();
-
-        // Ignore creatures that aren't monsters
-        if (! (event.getEntity() instanceof Monster)) {
-            return;
-        }
-
-        // Ignore creatures spawned by a plugin
-        if (event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.CUSTOM) {
-            return;
-        }
-
-        // Main Farm
-        if (x <= -357 && x >= -453 && z <= 53 && z >= -47) {
-            cancelled = true;
-        }
-
-        // Field Behind Farm
-        if (x >= -437 && x <= -345 && z >= -171 && z <= -47) {
-            cancelled = true;
-        }
-
-        event.setCancelled(cancelled);
-    }
 }
