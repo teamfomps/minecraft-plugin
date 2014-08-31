@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.teamfomps.minecraft.MonsterListener;
 import com.teamfomps.minecraft.HorseFarmListener;
+import com.teamfomps.minecraft.MinecartEjectionListener;
 
 public class TeamFomps extends JavaPlugin
 {
@@ -16,5 +17,8 @@ public class TeamFomps extends JavaPlugin
         getServer()
           .getPluginManager()
           .registerEvents(new HorseFarmListener(getLogger()), this);
+        getServer()
+          .getPluginManager()
+          .registerEvents(new MinecartEjectionListener(getLogger()), this);
     }
 }
